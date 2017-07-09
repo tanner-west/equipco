@@ -1,0 +1,21 @@
+.products {
+  width: 100%;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.products td {
+  margin: 0;
+}
+.product-row:hover {
+  background-color: lightgrey;
+}
+
+
+
+
+
+#detail {
+  height: 250px;
+  width: 250px;
+}
