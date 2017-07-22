@@ -1,0 +1,12 @@
+<table class="products">
+  <tr>
+    <td>Product</td>
+    <td>Item No.</td>
+    <td>Volume</td>
+  </tr>
+  <tr class="product-row" *ngFor="let product of products" (mouseover)="onSelect(product)">
+    <td class="title">{{ product.title.rendered }}</td>
+  	<td class="mpn">{{ product.mpn }}</td>
+  	<td class="volume">{{ product.volume }}</td>
+  	<td class="link"><a href="http://tannerwest.net">View Product...</a></td>
+	</tr>

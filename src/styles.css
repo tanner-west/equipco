@@ -1,9 +1,40 @@
-body {
+html, body {
 	  font-family: helvetica, arial, sans-serif;
-
+	  background-color: beige;
 }
 
 h1 {
   color: black;
-  font-size:;
+}
+
+#sidebar, #content {
+		background-color: grey;
+		margin: 10px;
+		padding: 10px;
+
+}
+
+#sidebar {
+	width: calc(15% - 20px);
+	float: left;
+	box-sizing: border-box;
+
+}
+
+#sidebar ul {
+	margin: 0;
+
+}
+#content {
+	width: calc(85% - 20px);
+	float: right;
+	box-sizing: border-box;
+
+}
+
+#header {
+	text-align: center;
+	width: 100%;
+
+
 }

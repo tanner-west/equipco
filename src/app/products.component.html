@@ -1,22 +1,6 @@
-
-<h2>Products Component</h2>
-<div id="detail">
-<div *ngIf="selectedProduct">
-  <h2>
-    {{ selectedProduct.mpn | uppercase }}
-  </h2>
-  <h2>
-    {{ selectedProduct.title.rendered }}
-  </h2>
-</div>
-</div>
-	<table class="products">
-	<tr><td>Product</td><td>Item No.</td><td>Volume</td></tr>
-	<tr class="product-row" *ngFor="let product of products"
-	(mouseover)="onSelect(product)"
-	[class.selected]="hero === selectedHero">
-	<td class="title">{{ product.title.rendered }}</td>
-  	<td class="mpn">{{ product.mpn }}</td>
-  	<td class="volume">{{ product.volume }}</td>
-  	<td class="link"><a href="http://tannerwest.net">View Product...</a></td>
-  	</tr>
+<h1>This products.components.html shows up</h1>
+<ol>
+	<li *ngFor="let product of products">{{product.volume}}</li>
+</ol>
+<products-view>
+</products-view>

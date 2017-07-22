@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Directive } from '@angular/core';
 import { Product } from './product';
 import { ProductService } from './product.service';
 import { Router } from '@angular/router';
+import { ProductsTableComponent} from './products-table.component';
 
 @Component({
-  selector: 'my-products',
+  selector: 'main-products',
   templateUrl: './products.component.html', 
-  styleUrls: [ './products.component.css' ],
   providers: [ProductService]
 })
 
@@ -36,6 +36,6 @@ export class ProductsComponent implements OnInit {
   }
 
   gotoDetail(): void {
-    this.router.navigate(['/detail', this.selectedProduct.description])
+    this.router.navigate(['/detail', this.selectedProduct.name])
   }
 }

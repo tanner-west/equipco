@@ -1,7 +1,8 @@
 export class Product {
-	title: object;
-	description: string;
+	id: number;
+	name: string;
 	mpn: string;
 	volume: number;
+	sections: number;
 	
-}	
+}	 

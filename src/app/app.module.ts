@@ -6,12 +6,10 @@ import { HttpModule} from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
-
-import { ProductDetailComponent } from './product-detail.component';
+import { ProductsTableComponent } from './products-table.component';
 import { ProductsComponent } from './products.component';
 import { ProductService } from './product.service';
 import { AppComponent }  from './app.component';
-import { DashboardComponent} from './dashboard.component';
 
 @NgModule({
   imports:      [ 
@@ -22,9 +20,8 @@ import { DashboardComponent} from './dashboard.component';
   	],
   declarations: [ 
   	AppComponent,
-  	ProductDetailComponent,
   	ProductsComponent,
-  	DashboardComponent
+    ProductsTableComponent
    ],
   providers: [
   	ProductService
