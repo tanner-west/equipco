@@ -1,0 +1,6 @@
+<div *ngIf="selections">
+<h3>Active Selections</h3>
+<ul id="active-options-list">
+<li *ngFor="let selection of selections" class="active-option">{{stringify(selection)}}<span class="remove-option" (click)="removeOption(selection)">X</span></li>
+</ul>
+</div>

@@ -1,0 +1,18 @@
+
+<ul *ngIf="products">
+<li *ngFor="let option of products | productFeatures : ['volume','mpn', 'category', 'market']">
+	{{option.label}}
+	<form>
+		<li *ngFor="let value of option.values">
+			<input id={{value}} 
+			attr.data-option-label={{option.label}}
+			type="checkbox"
+			name={{option.label}}
+
+			(change)="makeSelection(option.label + ' ' + value)">
+			{{value}}
+		</li>
+	</form>
+</li>
+</ul>
+<button class="my-fave-button" (click)="logProducts()">Click</button>

@@ -1,0 +1,45 @@
+#products-pane {
+	width: 80%;
+	float: right;
+}
+#sidebar {
+	width: 20%;
+	float: left;
+}
+#products-view-nav li {
+	display: inline-block;
+	list-style-type: none;
+	padding: 10px 20px;
+	margin-bottom: -1px;
+
+}
+#products-view-nav {
+	padding: 0;
+	margin: 0;
+}
+
+.active-view {
+	display: block !important;
+
+
+}
+
+.active-tab {
+	border-bottom: 1px solid white;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+
+}
+
+.product-view {
+	width: 100%;
+	display: none;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+
+
+
+}

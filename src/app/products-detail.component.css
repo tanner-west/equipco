@@ -1,0 +1,14 @@
+.detail-div {
+	display: inline-block;
+	margin: 20px;
+}
+
+.detail-list {
+	margin: 0;
+	padding: 0px 20px;
+}
+
+.detail-list li {
+	margin: 10px 0;
+
+}

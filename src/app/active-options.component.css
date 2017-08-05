@@ -1,0 +1,18 @@
+#active-options-list{
+	list-style-type: none;
+	height: 50px;
+}
+
+.active-option {
+	display: inline-block;
+	padding: 5px;
+	margin: 5px;
+	background-color: #0047ab;
+	color: white;
+}
+
+.remove-option {
+	font-weight: bold;
+	color: red;
+	padding: 5px;
+}

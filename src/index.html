@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html onload="">
   <head>
     <title>Equipco</title>
     <base href="/">
@@ -20,11 +20,32 @@
   </head>
 
   <body>
-    <div id="header"><h1>Equipco Header</h1></div>
+  <div id="container">
+      <div id="header">
+        <h1 id="title">Equipco</h1>
+        <p id="tagline"><i>"U Know Equipco"</i></p>
+        <ul id="site-nav">
+          <li>Find Us</li>
+          <li>Careers</li>
+          <li>Financing</li>
+        </ul>
+       <div id="subheading">
+          <h2>Equipment For Work</h2> 
 
-    <div id="sidebar"><ul><li>Item One</li><li>Item two</li><li>Item Three</li></ul></div>
-    <div id="content">
-      <my-app>Loading AppComponent content here ...</my-app>
+       </div> 
+       <!-- <ul id="cat-nav">
+          <li>Boxes</li>
+          <li>Slabs</li>
+          <li>Blowers</li>
+        </ul>-->
+      </div>
+
+
+      <div id="content">
+        <my-app>Loading AppComponent content here ...</my-app>
+      </div>
     </div>
+
   </body>
+
 </html>

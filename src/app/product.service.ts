@@ -5,7 +5,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { Product } from './product';
-import { PRODUCTS } from './mock-product';
 
 @Injectable()
 export class ProductService {

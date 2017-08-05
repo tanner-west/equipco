@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 	template: `<main-products></main-products>
 
 
-
+				
 
 
 
@@ -17,6 +17,7 @@ import { Component } from '@angular/core';
 				</nav>
 				<router-outlet></router-outlet>
 				-->
+
 
 				`
 })

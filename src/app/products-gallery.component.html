@@ -1,0 +1,11 @@
+<div *ngIf="products" id="products-gallery">
+
+  <div class="gallery-div" *ngFor="let product of products | applyOptions:selections">
+
+
+ 
+  <img class="gallery-image" src="{{product.acf.primary_image}}">
+  <h3 class="gallery-title">{{ product.title.rendered }}</h3>
+
+	</div>
+</div>

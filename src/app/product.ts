@@ -4,5 +4,6 @@ export class Product {
 	mpn: string;
 	volume: number;
 	sections: number;
+	primaryImage: string;
 	
 }	 

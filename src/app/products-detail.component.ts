@@ -4,22 +4,21 @@ import { Router } from '@angular/router';
 import { ProductsComponent } from './products.component';
 
 @Component({
-  selector: 'products-view',
-  templateUrl: './products-table.component.html', 
-  styleUrls: [ './products-table.component.css' ],
+  selector: 'products-detail',
+  templateUrl: './products-detail.component.html', 
+  styleUrls: [ './products-detail.component.css' ],
 })
 
 
 
-export class ProductsTableComponent implements OnInit { 
-@Input() products: Product[];
+export class ProductsDetailComponent implements OnInit { 
+  @Input() products: Product[];
 
 
 
-constructor(
+
+	constructor(
   private router: Router) {}
 
 	ngOnInit(): void {}
 }
-
-

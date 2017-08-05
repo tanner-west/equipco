@@ -4,19 +4,20 @@ import { Router } from '@angular/router';
 import { ProductsComponent } from './products.component';
 
 @Component({
-  selector: 'products-view',
-  templateUrl: './products-table.component.html', 
-  styleUrls: [ './products-table.component.css' ],
+  selector: 'products-gallery',
+  templateUrl: './products-gallery.component.html', 
+  styleUrls: [ './products-gallery.component.css' ],
 })
 
 
 
-export class ProductsTableComponent implements OnInit { 
-@Input() products: Product[];
+export class ProductsGalleryComponent implements OnInit { 
+  @Input() products: any;
+  @Input() selections: any;
 
 
 
-constructor(
+	constructor(
   private router: Router) {}
 
 	ngOnInit(): void {}

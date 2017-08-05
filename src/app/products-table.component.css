@@ -14,3 +14,8 @@
 #detail {
   height: 150px;
 }
+
+#products-table {
+	margin: 20px;
+	width: 100%;
+}
