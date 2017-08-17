@@ -6,10 +6,10 @@
 		<li *ngFor="let value of option.values">
 			<input id={{value}} 
 			attr.data-option-label={{option.label}}
-			type="checkbox"
+			type="radio"
 			name={{option.label}}
 
-			(change)="makeSelection(option.label + ' ' + value)">
+			(change)="makeSelection($event)">
 			{{value}}
 		</li>
 	</form>

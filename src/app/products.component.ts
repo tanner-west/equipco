@@ -43,7 +43,7 @@ export class ProductsComponent implements OnInit {
   //onSelection is fired when the user clicks on a checkbox in sidebar
   onSelection(selection: any){
     console.log(selection);
-   /* var selectionId = selection.target.id;
+   var selectionId = selection.target.id;
     var obj = {};
     obj[selection.target.attributes["data-option-label"].value] = selectionId;
     //if target checkbox is checked, the corresponding feature is pushed into "selections" array as object like {"mpn":"1-F-1"}
@@ -75,7 +75,7 @@ export class ProductsComponent implements OnInit {
           this.selections.splice(i, 1);
           break;
     } else {
-    }}}*/
+    }}}
   }
 	constructor(
   private router: Router,
