@@ -1,13 +1,16 @@
 <table id="products-table">
   <tr>
-    <td>Product</td>
-    <td>Item No.</td>
-    <td>Volume</td>
+    <th>Product</th>
+    <th>Market</th>
+    <th>Item No.</th>
+    <th>Volume</th>
+    <th>Voltage</th>
   </tr>
-  <tr class="product-row" *ngFor="let product of products">
+  <tr class="product-row" *ngFor="let product of products | applyOptions:selections">
     <td class="title">{{ product.title.rendered }}</td>
+    <td class="market">{{ product.acf.market}}</td>
   	<td class="mpn">{{ product.mpn }}</td>
   	<td class="volume">{{ product.volume }}</td>
-  	<td class="link"><a href="http://tannerwest.net">View Product...</a></td>
+    <td class="voltage">{{ product.acf.voltage}}</td>
 	</tr>
 </table>

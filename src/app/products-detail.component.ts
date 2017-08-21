@@ -13,6 +13,8 @@ import { ProductsComponent } from './products.component';
 
 export class ProductsDetailComponent implements OnInit { 
   @Input() products: Product[];
+  @Input() selections: any;
+
 
 
 

@@ -1,10 +1,11 @@
 <div id="products-detail">
-  <div class="detail-div" *ngFor="let product of products">
+  <div class="detail-div" *ngFor="let product of products | applyOptions:selections">
   <h3>{{ product.title.rendered }}</h3>
     <ul class="detail-list">
 		<li class="detail-mpn">Product #: {{ product.mpn }}</li>
 		<li class="detail-volume">Volume: {{ product.volume }}</li>
-		<li class="detail-link"><a href="http://tannerwest.net">View Product</a></li>
+		<li class="detail-voltage">Voltage: {{ product.acf.voltage }}</li>
+		<li class="detal-market">Market: {{ product.acf.market }}</li>
   	</ul>
 	</div>
 </div>

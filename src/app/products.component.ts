@@ -22,11 +22,29 @@ export class ProductsComponent implements OnInit {
   selectedProduct: Product;
   activeTab: string;
 
+  onLogSelections(){
+    console.log(JSON.stringify(this.selections));
+  }
+
+  uncheckSelection(selectionToUncheck: any){
+    var key = Object.keys(selectionToUncheck)[0];
+    var x: any = document.getElementsByName(key);
+    var i;
+      for (i = 0; i < x.length; i++) {
+        if (x[i].type == "radio") {
+          x[i].checked = false;
+    }
+  } 
+
+  }
+
+
+
   onRemoveSelection(selectionToRemove: any){
-    console.log("this.selections is " + JSON.stringify(this.selections));
+    console.log("to remove: " + JSON.stringify(selectionToRemove));
+    this.uncheckSelection(selectionToRemove);
     var selections = this.selections;
     selections.forEach(function(selection: any){
-      console.log("selection: " + JSON.stringify(selection) + "\n selection to remove: " + JSON.stringify(selectionToRemove));
       if(JSON.stringify(selection) == JSON.stringify(selectionToRemove)){
         var removeString = JSON.stringify(selectionToRemove);
         var indexInSelections = selections.indexOf(removeString);
@@ -34,15 +52,15 @@ export class ProductsComponent implements OnInit {
       }
     })  
     this.selections = selections;
-    console.log("new this.selections is " + JSON.stringify(this.selections));
 
   }
 
 
 
+
+
   //onSelection is fired when the user clicks on a checkbox in sidebar
   onSelection(selection: any){
-    console.log(selection);
    var selectionId = selection.target.id;
     var obj = {};
     obj[selection.target.attributes["data-option-label"].value] = selectionId;
@@ -69,6 +87,7 @@ export class ProductsComponent implements OnInit {
       }
     }
 
+    //if target checkbox isn't checked, remove tht feture from selections array
     else if(!selection.target.checked){
       for(let i = 0; i<=this.selections.length; i++){
         if(JSON.stringify(this.selections[i]) == JSON.stringify(obj)){
@@ -77,6 +96,20 @@ export class ProductsComponent implements OnInit {
     } else {
     }}}
   }
+
+  removeSelection(selection: any){
+    console.log("select none");
+    for(let i = 0; i<this.selections.length; i++){
+      var selectionKey = Object.keys(this.selections[i])[0];
+      if(selectionKey == selection.target.name){
+        console.log("selection key matches selection target name")
+        this.selections.splice(i, 1);
+      } 
+    }
+
+  }
+
+
 	constructor(
   private router: Router,
   private productService: ProductService) {}

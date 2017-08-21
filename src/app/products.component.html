@@ -1,25 +1,25 @@
-<h1>Blowers, Slabs, and Boxes</h1>
+<h1>Heavy-Duty Products</h1>
 <div id="active-options">
-<active-options (onRemoveSelection)="onRemoveSelection($event)" [selections]='selections'>
-</active-options>
+	<active-options (onRemoveSelection)="onRemoveSelection($event)" [selections]='selections'>
+	</active-options>
 </div>
 <div id="products-pane">
-<ul id="products-view-nav">
-<li (click)="setActiveTab($event)" id="gallery-tab" [class.active-tab]="activeTab == 'gallery-tab'">Gallery</li>
-<li (click)="setActiveTab($event)" id="table-tab" [class.active-tab]="activeTab == 'table-tab'">Table</li>
-<li (click)="setActiveTab($event)" id="detail-tab" [class.active-tab]="activeTab == 'detail-tab'">Detail</li>
+	<ul id="products-view-nav">
+	<li (click)="setActiveTab($event)" id="gallery-tab" [class.active-tab]="activeTab == 'gallery-tab'">Gallery</li>
+	<li (click)="setActiveTab($event)" id="table-tab" [class.active-tab]="activeTab == 'table-tab'">Table</li>
+	<li (click)="setActiveTab($event)" id="detail-tab" [class.active-tab]="activeTab == 'detail-tab'">Detail</li>
 </ul>
 
-<products-view class="product-view" [class.active-view]="activeTab == 'table-tab'" [products]='products' >
+<products-view class="product-view" [class.active-view]="activeTab == 'table-tab'" [products]='products' [selections]='selections'>
 </products-view>
 
 <products-gallery class="product-view" [class.active-view]="activeTab == 'gallery-tab'" [products]='products' [selections]='selections'>
 </products-gallery>
 
-<products-detail class="product-view" [class.active-view]="activeTab == 'detail-tab'" [products]='products'>
+<products-detail class="product-view" [class.active-view]="activeTab == 'detail-tab'" [products]='products' [selections]='selections'>
 </products-detail>
 </div>
 <div id="sidebar">
-<sidebar (onSelection)="onSelection($event)" [products]='products'>
+<sidebar (onSelection)="onSelection($event)" (removeSelection)="removeSelection($event)" [products]='products'>
 </sidebar>
 </div>

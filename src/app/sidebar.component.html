@@ -1,7 +1,7 @@
-
+<h2>Refine Selection</h2>
 <ul *ngIf="products">
-<li *ngFor="let option of products | productFeatures : ['volume','mpn', 'category', 'market']">
-	{{option.label}}
+<li *ngFor="let option of products | productFeatures : ['volume', 'category', 'market', 'voltage']">
+	<span class="option-header">{{option.label}}</span>
 	<form>
 		<li *ngFor="let value of option.values">
 			<input id={{value}} 
@@ -9,10 +9,13 @@
 			type="radio"
 			name={{option.label}}
 
-			(change)="makeSelection($event)">
+			(click)="makeSelection($event)">
 			{{value}}
+		</li>
+		<li>
+			<input (click)="selectNone($event)" checked type="radio" name={{option.label}}>
+			Any
 		</li>
 	</form>
 </li>
 </ul>
-<button class="my-fave-button" (click)="logProducts()">Click</button>

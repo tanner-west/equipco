@@ -15,7 +15,9 @@ export class ProductsGalleryComponent implements OnInit {
   @Input() products: any;
   @Input() selections: any;
 
-
+logProd(){
+	console.log(this.products.length);
+}
 
 	constructor(
   private router: Router) {}

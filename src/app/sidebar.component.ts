@@ -14,9 +14,15 @@ import { ProductsComponent } from './products.component';
 export class SidebarComponent implements OnInit { 
 @Input() products: any[];
 @Output() onSelection = new EventEmitter<any>();
+@Output() removeSelection = new EventEmitter<any>();
 
+selectNone(selection: any){
+	
+	this.removeSelection.emit(selection);
+}
 
 makeSelection(selection: any){
+	
 	this.onSelection.emit(selection);
 }
 

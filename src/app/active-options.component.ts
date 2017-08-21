@@ -16,8 +16,10 @@ export class ActiveOptionsComponent implements OnInit {
   @Input() selections: any;
   @Output() onRemoveSelection = new EventEmitter<any>();
 
-removeOption(selection: any){
+removeSelection($event: any, selection: any){
 	this.onRemoveSelection.emit(selection);
+	console.log($event.target);
+	console.log(selection);
 }
  stringify(option: any){
  	var key = Object.keys(option)[0];
